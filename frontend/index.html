@@ -33,7 +33,7 @@
           <tr>
             <th scope="row">2</th>
             <td>brand</td>
-            <td>VARCHAR(16)</td>
+            <td>VARCHAR(32)</td>
             <td>NOT NULL</td>
           </tr>
           <tr>
@@ -45,20 +45,20 @@
           <tr>
             <th scope="row">4</th>
             <td>priceOffer</td>
-            <td>DOUBLE(6,3)</td>
+            <td>DECIMAL(7,2)</td>
             <td>NOT NULL</td>
           </tr>
           <tr>
             <th scope="row">5</th>
-            <td>seller</td>
-            <td>VARCHAR(16)</td>
-            <td>NOT NULL</td>
+            <td>isPrivate</td>
+            <td>TINYINT</td>
+            <td>DEFAULT(0)</td>
           </tr>
           <tr>
             <th scope="row">6</th>
-            <td>kilometer</td>
-            <td>DOUBLE(5,3)</td>
-            <td>NOT NULL</td>
+            <td>kilometers</td>
+            <td>MEDIUMINT</td>
+            <td>NOT NULL UNSIGNED <!-- numero intero non negativo (PARTE DA ZERO) --> </td>
           </tr>
           <tr>
             <th scope="row">7</th>
@@ -69,13 +69,13 @@
           <tr>
             <th scope="row">8</th>
             <td>fuelType</td>
-            <td>VARCHAR(20)</td>
+            <td>VARCHAR(32)</td>
             <td>NOT NULL</td>
           </tr>
           <tr>
             <th scope="row">9</th>
             <td>model</td>
-            <td>VARCHAR(10)</td>
+            <td>VARCHAR(64)</td>
             <td>NOT NULL</td>
           </tr>
           <tr>
@@ -87,8 +87,38 @@
           <tr>
             <th scope="row">11</th>
             <td>plate</td>
-            <td>??numeri e lettere</td>
+            <td>VARCHAR(16)</td>
             <td>UNIQUE</td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>description</td>
+            <td>TEXT</td>
+            <td>NULL</td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <td>sold</td>
+            <td>VARCHAR(16)</td>
+            <td>UNIQUE</td>
+          </tr>
+          <tr>
+            <th scope="row">14</th>
+            <td>seats</td>
+            <td>TINYINT</td>
+            <td>NULL</td>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <td>doors</td>
+            <td>TINYINT</td>
+            <td>NULL</td>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <td>mainImg</td>
+            <td>VARCHAR(256) <!-- scrivi il percorso all'immagine --></td>
+            <td>NULL</td>
           </tr>
         </tbody>
       </table>
